@@ -1,0 +1,143 @@
+.section {
+  padding-inline: var(--section-pad-x);
+  padding-top: var(--section-pad-y);
+  padding-bottom: 0;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  padding-bottom: var(--space-9);
+}
+
+@media (min-width: 768px) {
+  .top {
+    grid-template-columns: 1fr 320px;
+    align-items: start;
+  }
+}
+
+.emailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-7);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--accent-glow);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 28px;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .emailLink {
+    font-size: 44px;
+  }
+}
+
+.emailLink:hover {
+  color: var(--accent);
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .ctaRow {
+    flex-direction: row;
+  }
+}
+
+.ctaRow > a:first-child {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ctaRow > a:first-child {
+    width: auto;
+  }
+}
+
+.ghostPair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.ghostPair > a {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .ghostPair {
+    display: contents;
+  }
+}
+
+.availability {
+  justify-self: start;
+}
+
+@media (min-width: 768px) {
+  .availability {
+    justify-self: end;
+    text-align: right;
+  }
+}
+
+.location {
+  font-family: var(--font-serif);
+  font-size: var(--fs-title);
+  color: var(--text);
+  margin-bottom: var(--space-2);
+}
+
+.note {
+  max-width: 280px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .note {
+    margin-left: auto;
+  }
+}
+
+.footerBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--line);
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .footerBar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-2);
+}
+
+.backToTop:hover {
+  color: var(--accent);
+}

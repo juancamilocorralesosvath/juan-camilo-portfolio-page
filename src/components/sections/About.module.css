@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-9);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.paragraph {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-2);
+  margin-bottom: var(--space-5);
+}
+
+.education {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--text-2);
+}
+
+.stackGroups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.stackGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stackLabel {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

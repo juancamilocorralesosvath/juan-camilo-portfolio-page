@@ -1,0 +1,203 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'badge'
+    'name'
+    'role'
+    'photo'
+    'position'
+    'cta'
+    'ghost';
+  gap: var(--space-6);
+  padding-block: var(--space-8) var(--space-7);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 680px 1fr;
+    grid-template-areas:
+      'badge photo'
+      'name photo'
+      'role photo'
+      'position photo'
+      'cta photo'
+      'ghost photo';
+    align-items: center;
+    column-gap: var(--space-9);
+    min-height: 960px;
+    padding-block: var(--space-9) var(--space-8);
+  }
+}
+
+.badge {
+  grid-area: badge;
+}
+
+.name {
+  grid-area: name;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-display-xl);
+  line-height: var(--lh-display-xl);
+  letter-spacing: var(--ls-display-xl);
+  color: var(--text);
+}
+
+.name span {
+  display: block;
+}
+
+.role {
+  grid-area: role;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.position {
+  grid-area: position;
+  max-width: 540px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--text-2);
+}
+
+.cta {
+  grid-area: cta;
+}
+
+.cta > a {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .cta > a {
+    width: auto;
+  }
+}
+
+.ghostRow {
+  grid-area: ghost;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.ghostRow > a {
+  min-width: 0;
+  padding-inline: var(--space-2);
+  gap: var(--space-1);
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .ghostRow {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .ghostRow > a {
+    padding-inline: var(--space-6);
+    gap: var(--space-2);
+    font-size: var(--fs-button);
+  }
+}
+
+.photoBlock {
+  grid-area: photo;
+  position: relative;
+  width: 332px;
+  height: 420px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .photoBlock {
+    width: 460px;
+    height: 600px;
+    margin-inline: 0;
+    justify-self: end;
+  }
+}
+
+.photoOutline {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--accent-glow);
+  border-radius: 166px 166px 18px 18px;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .photoOutline {
+    border-radius: 230px 230px 20px 20px;
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 166px 166px 18px 18px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .imageWrap {
+    border-radius: 230px 230px 20px 20px;
+  }
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.imageWrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(233, 162, 59, 0) 55%, rgba(20, 17, 15, 0.55) 100%);
+}
+
+.credCard {
+  position: absolute;
+  left: -16px;
+  bottom: -20px;
+  z-index: 2;
+  max-width: 220px;
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-frame);
+  box-shadow: var(--shadow-hover);
+}
+
+.credEyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--space-2);
+}
+
+.credText {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text);
+}

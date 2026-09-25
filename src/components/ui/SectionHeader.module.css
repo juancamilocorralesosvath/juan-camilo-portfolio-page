@@ -1,0 +1,31 @@
+.title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--text);
+  margin: 0 0 var(--space-4);
+}
+
+.titleL {
+  font-size: var(--fs-display-l);
+  line-height: var(--lh-display-l);
+  letter-spacing: var(--ls-display-l);
+}
+
+.titleM {
+  font-size: var(--fs-display-m);
+  line-height: var(--lh-display-m);
+  letter-spacing: var(--ls-display-m);
+}
+
+.accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.sub {
+  max-width: 560px;
+  color: var(--text-2);
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+}

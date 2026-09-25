@@ -1,0 +1,26 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Desktop A specifies an exact 40x40px circle; the 44px floor above is a
+   mobile-only touch-target requirement (handoff §4.3), not a visual spec. */
+@media (min-width: 768px) {
+  .toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
