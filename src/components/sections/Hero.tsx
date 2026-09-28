@@ -1,5 +1,4 @@
 import { hero, images, CV_URL, EMAIL, LINKEDIN_URL, GITHUB_URL } from '../../data/content';
-import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { EmailIcon, LinkedInIcon, GithubIcon } from '../ui/icons';
 import styles from './Hero.module.css';
@@ -9,10 +8,6 @@ export function Hero() {
 
   return (
     <section id="top" className={`section ${styles.hero}`}>
-      <div className={styles.badge}>
-        <Badge dot>{hero.badge}</Badge>
-      </div>
-
       <h1 className={styles.name}>
         <span>{hero.nameLine1}</span>
         <span>{hero.nameLine2}</span>

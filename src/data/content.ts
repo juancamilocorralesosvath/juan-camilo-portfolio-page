@@ -35,7 +35,6 @@ export const navLinks: NavLink[] = [
 ];
 
 export const hero = {
-  badge: 'Open to remote work',
   nameLine1: 'Juan Camilo',
   nameLine2: 'Corrales Osvath',
   role: 'Software Engineer & Product Builder',

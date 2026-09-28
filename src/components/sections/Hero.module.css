@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    'badge'
     'name'
     'role'
     'photo'
@@ -17,7 +16,6 @@
   .hero {
     grid-template-columns: 680px 1fr;
     grid-template-areas:
-      'badge photo'
       'name photo'
       'role photo'
       'position photo'
@@ -28,10 +26,6 @@
     min-height: 960px;
     padding-block: var(--space-9) var(--space-8);
   }
-}
-
-.badge {
-  grid-area: badge;
 }
 
 .name {
